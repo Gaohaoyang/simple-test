@@ -29,17 +29,30 @@ function App() {
         onClick={() => {
           console.log('clicked call up App')
           console.log(navigator.userAgent)
-          window.location.href= 'intent://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0%20%20%20%20%20%20&source=alimama&bc_fl_src=taobaolite_dld_&packageName=com.taobao.litetao&h5Url=https%3A%2F%2Fmarket.wapa.taobao.com%2Fapp%2Fnozomi%2Fapp-h5-detail%2Fmain%2Findex.html%3Fid%3D616202233158#Intent;scheme=taobaolite;package=com.taobao.litetao;end'
         }}
       >
-        call up App
+        copy text
       </button>
-      {/* <button
-        className="btn"
-        data-clipboard-text="Just because you can doesn't mean you should — clipboard.js"
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          window.location.href =
+            'intent://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0%20%20%20%20%20%20&source=alimama&bc_fl_src=taobaolite_dld_&packageName=com.taobao.litetao&h5Url=https%3A%2F%2Fmarket.wapa.taobao.com%2Fapp%2Fnozomi%2Fapp-h5-detail%2Fmain%2Findex.html%3Fid%3D616202233158#Intent;scheme=taobaolite;package=com.taobao.litetao;end'
+        }}
       >
-        Copy to clipboard
-      </button> */}
+        Android intent open
+      </button>
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          window.location.href =
+            'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0&source=ltao_detail_h5&packageName=com.taobao.litetao&bc_fl_src=taobaolite_dld_testchannel&h5Url=https%3A%2F%2Fmarket.wapa.taobao.com%2Fapp%2Fnozomi%2Fapp-h5-detail%2Fmain%2Findex.html%3Fid%3D616202233158'
+        }}
+      >
+        url scheme
+      </button>
       <div>
         <img src="https://gw.alicdn.com/tfs/TB1Q5Bf0xv1gK0jSZFFXXb0sXXa-200-200.png" alt="apple" />
       </div>
