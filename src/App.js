@@ -38,7 +38,7 @@ function App() {
       <button
         onClick={() => {
           window.location.href =
-            'intent://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0%20%20%20%20%20%20&source=alimama&bc_fl_src=taobaolite_dld_&packageName=com.taobao.litetao&h5Url=https%3A%2F%2Fmarket.wapa.taobao.com%2Fapp%2Fnozomi%2Fapp-h5-detail%2Fmain%2Findex.html%3Fid%3D616202233158#Intent;scheme=taobaolite;package=com.taobao.litetao;end'
+            'intent://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0%20%20%20%20%20%20&source=alimama&bc_fl_src=taobaolite_dld_&packageName=com.taobao.litetao&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2Fsolutionaplus%2Fcaishendao%3Fwx_navbar_transparent%3Dtrue%26needLogin%3Dtrue#Intent;scheme=taobaolite;package=com.taobao.litetao;end'
         }}
       >
         Android intent open
@@ -48,7 +48,7 @@ function App() {
       <button
         onClick={() => {
           window.location.href =
-            'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0&source=ltao_detail_h5&packageName=com.taobao.litetao&bc_fl_src=taobaolite_dld_testchannel&h5Url=https%3A%2F%2Fmarket.wapa.taobao.com%2Fapp%2Fnozomi%2Fapp-h5-detail%2Fmain%2Findex.html%3Fid%3D616202233158'
+            'taobaolite://m.ltao.com/open/index.html?action=ali.open.nav&module=h5&bootImage=0&source=ltao_detail_h5&packageName=com.taobao.litetao&bc_fl_src=taobaolite_dld_testchannel&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fsale%2Fsolutionaplus%2Fcaishendao%3Fwx_navbar_transparent%3Dtrue%26needLogin%3Dtrue'
         }}
       >
         url scheme
