@@ -12,6 +12,7 @@
     >
       click to copy
     </button>
+    <button id="callup">call up telite</button>
     <script src="https://g.alicdn.com/code/lib/clipboard.js/2.0.6/clipboard.min.js"></script>
     <script>
       var clipboard = new ClipboardJS('.btn')
@@ -27,6 +28,10 @@
       clipboard.on('error', function (e) {
         console.error('Action:', e.action)
         console.error('Trigger:', e.trigger)
+      })
+
+      document.querySelector('#callup').addEventListener(() => {
+
       })
     </script>
   </body>
