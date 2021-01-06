@@ -1,6 +1,6 @@
 {
-  "short_name": "Test call up",
-  "name": "Test call up and copy",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
