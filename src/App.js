@@ -53,7 +53,27 @@ function App() {
       >
         url scheme
       </button>
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          window.location.href = 'https://b.mashort.cn'
+        }}
+      >
+        iOS universal link
+      </button>
+      <br />
+      <br />
+      <button
+        onClick={() => {
+          window.location.href = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.taobao.litetao'
+        }}
+      >
+        应用宝
+      </button>
+
       <div>
+        alicdn 图片测试
         <img src="https://gw.alicdn.com/tfs/TB1Q5Bf0xv1gK0jSZFFXXb0sXXa-200-200.png" alt="apple" />
       </div>
     </div>
