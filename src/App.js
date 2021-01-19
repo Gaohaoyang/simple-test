@@ -19,6 +19,23 @@ clipboard.on('error', function (e) {
   console.error('Trigger:', e.trigger)
 })
 
+/**
+ * 加载动态 script
+ * @param url
+ * @param callback
+ */
+const loadScript = (url, callback) => {
+  const script = document.createElement('script')
+  script.type = 'text/javascript'
+  script.onload = function() {
+    callback && callback()
+  }
+  script.src = url
+  document.querySelector('head').insertAdjacentElement('beforeend', script)
+}
+
+loadScript(`https://sgcdn.litetao.taobao.com/common/ltao_gs.js?t=${+new Date()}`, () => {})
+
 function App() {
   return (
     <div className="App">
