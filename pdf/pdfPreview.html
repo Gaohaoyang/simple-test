@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script type="module">
+      import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/+esm';
+    </script>
+
+    <script type="module">
+      let url = './snapliiCreditAccountAgreementCompressed.pdf';
+
+      const getUrlParamObj = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const params = {};
+        for (const [key, value] of urlParams) {
+          params[key] = value;
+        }
+        return params;
+      };
+
+      const urlParamObj = getUrlParamObj();
+
+      if (urlParamObj.link) {
+        url = decodeURIComponent(urlParamObj.link);
+      }
+
+      // Loaded via <script> tag, create shortcut to access PDF.js exports.
+      var { pdfjsLib } = globalThis;
+
+      // The workerSrc property shall be specified.
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+
+      // Asynchronous download of PDF
+      var loadingTask = pdfjsLib.getDocument(url);
+
+      loadingTask.promise.then(
+        function (pdf) {
+          // console.log('PDF loaded', pdf);
+          console.log('PDF loaded', pdf.numPages);
+
+          // render all pages
+          for (var i = 1; i <= pdf.numPages; i++) {
+            // fetch page
+            pdf.getPage(i).then(function (page) {
+              console.log('Page loaded');
+
+              var scale = 2;
+              var viewport = page.getViewport({ scale: scale });
+
+              // Prepare canvas using PDF page dimensions
+              var canvas = document.createElement('canvas');
+              var context = canvas.getContext('2d');
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
+
+              // Render PDF page into canvas context
+              var renderContext = {
+                canvasContext: context,
+                viewport: viewport,
+              };
+              var renderTask = page.render(renderContext);
+              document.body.appendChild(canvas);
+            });
+          }
+        },
+        function (reason) {
+          // PDF loading error
+          console.error(reason);
+        },
+      );
+    </script>
+
+    <canvas id="the-canvas"></canvas>
+  </body>
+</html>
